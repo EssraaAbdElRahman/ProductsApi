@@ -27,7 +27,7 @@ Dependencies always point inward toward the Domain layer.
 | POST | /api/products | Create a product |
 
 ## Getting Started
-1. Update the connection string in `ProductsApi.Api/appsettings.json`
+1. Update the connection string in `Products.Api/appsettings.json`
 2. Apply migrations:
    `dotnet ef database update -p ProductsApi.Infrastructure -s Products.Api`
 3. Run: `dotnet run --project Products.Api`
