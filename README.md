@@ -29,6 +29,6 @@ Dependencies always point inward toward the Domain layer.
 ## Getting Started
 1. Update the connection string in `ProductsApi.Api/appsettings.json`
 2. Apply migrations:
-   `dotnet ef database update -p ProductsApi.Infrastructure -s ProductsApi.Api`
-3. Run: `dotnet run --project ProductsApi.Api`
+   `dotnet ef database update -p ProductsApi.Infrastructure -s Products.Api`
+3. Run: `dotnet run --project Products.Api`
 4. Open Swagger at `https://localhost:<port>/swagger`
