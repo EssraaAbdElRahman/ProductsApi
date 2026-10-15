@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="E:/huma volve training/Essraa Abd El-Rahman Task3/ProductsApi/Products.Api/Products.Api.csproj" />
+  <Project Path="E:/huma volve training/Essraa Abd El-Rahman Task3/ProductsApi/ProductsApi.Application/ProductsApi.Application.csproj" />
+  <Project Path="E:/huma volve training/Essraa Abd El-Rahman Task3/ProductsApi/ProductsApi.Domain/ProductsApi.Domain.csproj" />
+  <Project Path="E:/huma volve training/Essraa Abd El-Rahman Task3/ProductsApi/ProductsApi.Infrastructure/ProductsApi.Infrastructure.csproj" />
+</Solution>
