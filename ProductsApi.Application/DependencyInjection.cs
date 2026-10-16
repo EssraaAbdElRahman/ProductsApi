@@ -12,8 +12,10 @@ namespace ProductsApi.Application
 
             services.AddMediatR(cfg =>
             {
+
                 cfg.RegisterServicesFromAssembly(assembly);
-                cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));
+                cfg.AddOpenBehavior(typeof(LoggingBehavior<,>));     
+                cfg.AddOpenBehavior(typeof(ValidationBehavior<,>));                 
             });
 
             services.AddValidatorsFromAssembly(assembly);

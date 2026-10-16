@@ -15,6 +15,8 @@ namespace Products.Api.Middleware
             switch (exception)
             {
                 case ValidationException ex:
+                    logger.LogWarning("Validation failed: {Errors}",
+                                    string.Join("; ", ex.Errors.Select(e => e.ErrorMessage)));
                     problem = new ValidationProblemDetails(
                         ex.Errors.GroupBy(e => e.PropertyName)
                                  .ToDictionary(g => g.Key, g => g.Select(e => e.ErrorMessage).ToArray()))
@@ -25,6 +27,7 @@ namespace Products.Api.Middleware
                     break;
 
                 case NotFoundException ex:
+                    logger.LogWarning("Not found: {Message}", ex.Message);
                     problem = new ProblemDetails
                     {
                         Status = StatusCodes.Status404NotFound,
@@ -34,7 +37,7 @@ namespace Products.Api.Middleware
                     break;
 
                 default:
-                    logger.LogError(exception, "Unhandled exception");
+                    logger.LogError(exception, "Unhandled exception"); 
                     problem = new ProblemDetails
                     {
                         Status = StatusCodes.Status500InternalServerError,
